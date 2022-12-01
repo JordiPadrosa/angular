@@ -1,0 +1,6 @@
+<h1>Errors = {{this.getContador()}}</h1>
+<div class="fila">
+    <div *ngFor="let baralla of this.getTaula().baralles; let vIndex = index">
+        <app-baralla [baralla]="baralla"></app-baralla>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<span *ngIf="carta.visible == 'true' || carta.visible == 'blocked'">
+    <img src="../../../../assets/imatges/{{carta.img}}" alt="carta" width="auto" height="150px"/>
+</span>
+<span *ngIf="carta.visible == 'false'" (click)="agafar(carta)">
+    <img src="../../../../assets/imatges/baralla.png" alt="carta" width="auto" height="150px"/>
+</span>
