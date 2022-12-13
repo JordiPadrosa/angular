@@ -1,0 +1,23 @@
+Aplicacio perquè el client ens valori
+
+Criteris:
+Informació
+Claretat
+Respecte
+    .
+    .
+    .
+
+Valoracions:
+Informació necessària 4
+Informació irrellebant 3
+
+Són com rubriques
+
+Button que fagi la nota final
+
+Creador de rubriques i emplenar-la
+
+JSON
+sringify
+parse
