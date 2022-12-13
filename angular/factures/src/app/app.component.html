@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <p>num factura: 2022/<label name="numFactura">1</label></p>
+    <div class="dropdown" dropdown>
+      <p>Article:</p>
+      <button onclick="llistaArticles()">My Heroes</button>
+      <ul class="articles">
+        <li *ngFor="let article of articles">
+          <button type="button" (click)="onSelect(article)">
+            <span class="name">{{article.nom}}</span>
+          </button>
+        </li>
+      </ul>
+      <button (click)="addArticle()">+</button>
+  </div>
+    <table id="taula">
+        <tr>    
+            <td>Codi</td>
+            <td>Nom</td>
+            <td>Quantitat</td>
+            <td>Preu</td>
+            <td>Total</td>
+            <td>Descompte</td>
+        </tr>
+        <tr class="afegirArticles">
+          <td>
+              <span class="name">{{selectedArticle.codi}}</span>
+              <span class="name">{{selectedArticle.nom}}</span>
+              <span class="name">{{selectedArticle.quantitat}}</span>
+              <span class="name">{{selectedArticle.preu}}</span>
+              <span class="name">{{selectedArticle.total}}</span>
+          </td>
+        </tr>
+    </table>
+    <p>Base Imposable <label name="baseImposable"></label></p>
+    <p>IVA <label name="iva"></label></p>
+    <p>Import <label name="import"></label></p>
+    <p>Codi Factura <input id="numFactura"> <button>Recuperar</button></p>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<div *ngIf="hero">
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+</div>
+
+<button type="button" (click)="postName()">pass name</button>

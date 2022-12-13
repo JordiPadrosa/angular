@@ -1,0 +1,38 @@
+Alta article
+Identificacio
+Familia color desplegable (funcio)
+Codi: FFF-DDDDDDD-DC
+      col-0000004-B
+      0->A
+      1->X
+      2->M
+      3->T
+      4->B
+      5->C
+      6->S
+      7->O
+      8->P
+      9->Z
+Nom: 
+Característiques 
+Amplada: Llargada: altura:
+10x15x20
+Ubicació
+Passadís P-DD-E|D P-25-D
+Estanteria EST+DD.DD EST+25.42
+Forat: DD*CCC*DD\DD
+D->digit
+C->lletra ci
+25*AbC*12\52
+Alta
+familia:________
+codi:__________
+nom:__________
+caract: 10x15x20
+ubicació: P-25-DC
+Est+25.42
+25*Abc*12\52
+
+funcions
+id->Pocs!!
+imatges->Res

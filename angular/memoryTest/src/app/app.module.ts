@@ -7,6 +7,7 @@ import { CartaComponent } from './projecte/components/carta/carta.component';
 import { BarallaComponent } from './projecte/components/baralla/baralla.component';
 import { JugadorComponent } from './projecte/components/jugador/jugador.component';
 import { TaulaComponent } from './projecte/components/taula/taula.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { TaulaComponent } from './projecte/components/taula/taula.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

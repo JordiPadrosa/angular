@@ -1,0 +1,12 @@
+Cartes
+
+Al obrir 10 segons per veure les cartes
+
+contar els errors
+
+setInterval(funcio, milisegons) executa una funcio durant x segons
+
+1234
+4321
+1324
+2134

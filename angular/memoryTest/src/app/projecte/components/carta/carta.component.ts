@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { createUrlTreeFromSnapshot } from '@angular/router';
 import { Carta } from '../../model/entitats/implementacions/carta/Carta';
 import { TaulaService } from '../../model/services/taula/taula.service';
@@ -11,11 +12,13 @@ import { TaulaService } from '../../model/services/taula/taula.service';
 })
 export class CartaComponent implements OnInit {
   @Input() carta!: Carta;
+  ruta!:string;
   cartesSeleccionades:Array<Carta> = [];
 
-  constructor(private taulaService: TaulaService) { }
+  constructor(private taulaService: TaulaService, @Inject(APP_BASE_HREF) private baseHref: string) { }
 
   ngOnInit(): void {
+    this.ruta = this.baseHref;
     setTimeout(() => this.girarCartes(), 10000);
 
   }

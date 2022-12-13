@@ -1,0 +1,8 @@
+<span *ngIf="carta.visible">
+    {{carta.num}} - {{carta.pal}}
+    <img src="../../../../assets/imatges/{{carta.img}}" alt="carta" width="200px" height="auto"/>
+</span>
+
+<span *ngIf="!carta.visible" (click)="agafar(carta)">
+    <img src="../../../../assets/imatges/baralla.png" alt="carta" width="200px" height="auto"/>
+</span>
