@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Criteri } from '../../model/entitats/implementacions/Criteri';
 
 @Component({
   selector: 'app-valoracions',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./valoracions.component.css']
 })
 export class ValoracionsComponent implements OnInit {
-
-  constructor() { }
+  criterisLocalStorage!: string | null;
+  criteris: Array<Criteri> = [];
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.criterisLocalStorage = localStorage.getItem('criteris');
+    if(this.criterisLocalStorage != null){
+      this.criteris = JSON.parse(this.criterisLocalStorage);
+      console.log(this.criteris);
+    }
   }
 
 }

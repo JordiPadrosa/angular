@@ -31,13 +31,6 @@ export class CriterisComponent implements OnInit {
   afegirCriteri() {
     this.criteris.push(new Criteri(this.criterisForm.get("titol")?.value, []));
     localStorage.setItem('criteris', JSON.stringify(this.criteris));
-    console.log(localStorage.getItem('criteris'));
   }
 
-  guardarCriteris(criteris: any) {
-    //crear criteris i reenviar a pagina per posar valoracions als criteris
-    //this.criteris.push();
-    console.log(criteris);
-    localStorage.setItem('criteris', criteris);
-  }
 }
