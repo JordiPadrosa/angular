@@ -1,12 +1,7 @@
 <h1>Criteris</h1>
 
-<form [formGroup]="this.form" (ngSubmit)="onSubmit()">
-    <div *ngFor="let criteri of criteris">
-        <label>Títol: </label>
-        <input type="text" [formControl]='this.criteri'>
-        <button type="button" (click)="afegirForm()">+</button>
-    </div>
-    <button type="button" (click)="borrarForm()">Borrar</button>
-    <br>
-    <button [disabled]="!this.form.valid" (click)="afegirCriteris()">Envia</button>
+<form [formGroup]="this.criterisForm" (ngSubmit)="onSubmit()">
+    <label>Títol: </label>
+    <input type="text" formControlName="titol">
+    <button [disabled]="!this.criterisForm.valid" (click)="afegirCriteri()">Envia</button>
 </form>

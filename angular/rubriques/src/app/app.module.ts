@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CriterisComponent } from './projecte/components/criteris/criteris.component';
+import { ValoracionsComponent } from './projecte/components/valoracions/valoracions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CriterisComponent,
+    ValoracionsComponent,
   ],
   imports: [
     BrowserModule,
