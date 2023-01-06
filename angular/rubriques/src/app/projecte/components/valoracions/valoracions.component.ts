@@ -46,8 +46,5 @@ export class ValoracionsComponent implements OnInit {
       }
     }
     localStorage.setItem('criteris', JSON.stringify(this.criteris));
-    console.log(this.criteris);
   }
-  
-
 }
