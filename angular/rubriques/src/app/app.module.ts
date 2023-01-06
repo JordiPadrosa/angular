@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CriterisComponent } from './projecte/components/criteris/criteris.component';
 import { ValoracionsComponent } from './projecte/components/valoracions/valoracions.component';
+import { RubriquesComponent } from './projecte/components/rubriques/rubriques.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CriterisComponent,
     ValoracionsComponent,
+    RubriquesComponent,
   ],
   imports: [
     BrowserModule,
