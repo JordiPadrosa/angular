@@ -43,7 +43,6 @@ export class ValoracionsComponent implements OnInit {
     for(var i = 0; i < this.criteris.length; i++){
       if(this.criteris[i].titol == this.selectedOption){
         this.criteris[i].valoracions.push(new Valoracio(this.valoracionsForm.get("descripcio")?.value, this.valoracionsForm.get("valor")?.value));
-        console.log(this.criteris[i].valoracions[0].valor);
       }
     }
     localStorage.setItem('criteris', JSON.stringify(this.criteris));
