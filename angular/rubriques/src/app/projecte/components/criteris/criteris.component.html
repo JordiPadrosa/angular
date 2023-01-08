@@ -1,6 +1,6 @@
 <h1>Criteris</h1>
 
-<form [formGroup]="this.criterisForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="this.criterisForm">
     <label>Títol: </label>
     <input type="text" formControlName="titol">
     <button [disabled]="!this.criterisForm.valid" (click)="afegirCriteri()">Envia</button>

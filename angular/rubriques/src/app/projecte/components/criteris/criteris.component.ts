@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Criteri } from '../../model/entitats/implementacions/Criteri';
+import { Valoracio } from '../../model/entitats/implementacions/Valoracio';
 import { ValoracionsComponent } from '../valoracions/valoracions.component';
 @Component({
   selector: 'app-criteris',
@@ -26,10 +27,8 @@ export class CriterisComponent implements OnInit {
   })
 }
 
-  onSubmit() {
-  }
   afegirCriteri() {
-    this.criteris.push(new Criteri(this.criterisForm.get("titol")?.value, []));
+    this.criteris.push(new Criteri(this.criterisForm.get("titol")?.value, [new Valoracio('', 0)]));
     localStorage.setItem('criteris', JSON.stringify(this.criteris));
   }
 
