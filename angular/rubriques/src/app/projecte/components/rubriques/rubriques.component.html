@@ -1,1 +1,15 @@
-<p>rubriques works!</p>
+<h1>Rubriques</h1>
+<table>
+    <thead>
+      <tr>
+        <th> </th>
+        <th *ngFor="let num of numeros">{{num}}</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let criteri of criteris">
+            <td>{{criteri.titol}}</td>
+            <td *ngFor="let num of numeros">{{ordenarValoracions(criteri, num)}}</td>
+        </tr>
+    </tbody>
+  </table>
