@@ -8,4 +8,6 @@ export class Valoracio implements IValoracio {
         this.descripcio = descripcio;
         this.valor = valor;
     }
+    afegirValoracio(): void{
+    }
 }

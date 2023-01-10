@@ -8,4 +8,6 @@ export class Criteri implements ICriteri {
         this.titol = titol;
         this.valoracions = valoracions;
     }
+    afegirCriteri(): void{
+    }
 }
