@@ -32,7 +32,7 @@ export class CriterisComponent implements OnInit {
   })
 }
 
-  afegirCriteri() {
+  afegirCriteri(): void {
     this.criteris.push(new Criteri(this.criterisForm.get("titol")?.value, [new Valoracio('', -1)]));
     localStorage.setItem('criteris', JSON.stringify(this.criteris));
   }
