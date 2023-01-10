@@ -10,12 +10,17 @@ import { ValoracionsComponent } from '../valoracions/valoracions.component';
   styleUrls: ['./criteris.component.css']
 })
 export class CriterisComponent implements OnInit {
+  criterisLocalStorage!: string | null;
   criterisForm!: FormGroup;
   criteris: Array<Criteri> = []
   constructor(private fb: FormBuilder) {
   }
   
   ngOnInit(): void {
+    this.criterisLocalStorage = localStorage.getItem('criteris');
+    if(this.criterisLocalStorage != null){
+      this.criteris = JSON.parse(this.criterisLocalStorage);
+    }
     this.criterisForm = this.fb.group({
       titol: ['',
         {
@@ -28,7 +33,7 @@ export class CriterisComponent implements OnInit {
 }
 
   afegirCriteri() {
-    this.criteris.push(new Criteri(this.criterisForm.get("titol")?.value, [new Valoracio('', 0)]));
+    this.criteris.push(new Criteri(this.criterisForm.get("titol")?.value, [new Valoracio('', -1)]));
     localStorage.setItem('criteris', JSON.stringify(this.criteris));
   }
 
