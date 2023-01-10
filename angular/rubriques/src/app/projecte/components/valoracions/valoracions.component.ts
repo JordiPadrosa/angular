@@ -40,11 +40,13 @@ export class ValoracionsComponent implements OnInit {
   this.selectedOption = this.criteris[0].titol;
 }
   afegirValoracio(): void {
-    for(var i = 0; i < this.criteris.length; i++){
-      if(this.criteris[i].titol == this.selectedOption){
-        this.criteris[i].valoracions.push(new Valoracio(this.valoracionsForm.get("descripcio")?.value, this.valoracionsForm.get("valor")?.value));
+    if(this.valoracionsForm.get("valor")?.value >= 0){
+      for(var i = 0; i < this.criteris.length; i++){
+        if(this.criteris[i].titol == this.selectedOption){
+          this.criteris[i].valoracions.push(new Valoracio(this.valoracionsForm.get("descripcio")?.value, this.valoracionsForm.get("valor")?.value));
+        }
       }
+      localStorage.setItem('criteris', JSON.stringify(this.criteris));
     }
-    localStorage.setItem('criteris', JSON.stringify(this.criteris));
   }
 }
