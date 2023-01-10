@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Criteri } from '../../model/entitats/implementacions/Criteri';
 import { Valoracio } from '../../model/entitats/implementacions/Valoracio';
-import { ValoracionsComponent } from '../valoracions/valoracions.component';
 @Component({
   selector: 'app-criteris',
   templateUrl: './criteris.component.html',
