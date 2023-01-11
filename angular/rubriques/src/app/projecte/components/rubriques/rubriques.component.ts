@@ -23,7 +23,7 @@ export class RubriquesComponent implements OnInit {
     this.numeros = this.getNumeros();
   }
 
-  getNumeros() {
+  getNumeros(): Array<number> {
     this.criteris.forEach(criteri => {
       for(let i = 0; i < criteri.valoracions.length; i++) {
         if(!this.numeros.includes(criteri.valoracions[i].valor) && criteri.valoracions[i].valor >= 0){
@@ -57,12 +57,15 @@ export class RubriquesComponent implements OnInit {
     return status;
   }
 
-  calcularMitjana(){
+  calcularMitjana(): void{
     this.resultat = 0;
     for(let i = 0; i < this.criteris.length; i++) {
-      let valor = localStorage.getItem(this.criteris[i].titol)
+      let valor = localStorage.getItem(this.criteris[i].titol);
       if(valor != null){
         this.resultat = this.resultat + parseInt(valor);
+      }
+      if(i == this.criteris.length-1){
+        this.resultat = this.resultat/this.criteris.length;
       }
     }
   }

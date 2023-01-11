@@ -6,17 +6,16 @@
         <th *ngFor="let num of numeros">{{num}}</th>
       </tr>
     </thead>
-      <tbody>
-          <tr *ngFor="let criteri of criteris; let i = index">
-              <td>{{criteri.titol}}</td>
-              <td *ngFor="let num of numeros; let j = index">
-                <input *ngIf="getValoracio(criteri, num) != '' && !isChecked(criteri, num)" type="radio" id={{i}}{{j}} name={{i}}>
-                <input *ngIf="getValoracio(criteri, num) != '' && isChecked(criteri, num)" type="radio" id={{i}}{{j}} name={{i}} checked>
-                <label *ngIf="getValoracio(criteri, num) != ''" (click)="guardarChecked(criteri, num)" for={{i}}{{j}}>{{getValoracio(criteri, num)}} </label>
-              </td>
-          </tr>
-      </tbody>
-    <p *ngIf="this.resultat != 0">{{this.resultat}}</p>
+    <tbody>
+        <tr *ngFor="let criteri of criteris; let i = index">
+            <td>{{criteri.titol}}</td>
+            <td *ngFor="let num of numeros; let j = index">
+              <input *ngIf="getValoracio(criteri, num) != '' && !isChecked(criteri, num)" type="radio" id={{i}}{{j}} name={{i}}>
+              <input *ngIf="getValoracio(criteri, num) != '' && isChecked(criteri, num)" type="radio" id={{i}}{{j}} name={{i}} checked>
+              <label *ngIf="getValoracio(criteri, num) != ''" (click)="guardarChecked(criteri, num)" for={{i}}{{j}}>{{getValoracio(criteri, num)}} </label>
+            </td>
+        </tr>
+    </tbody>
+    <p *ngIf="this.resultat != 0">{{this.resultat.toFixed(2)}}</p>
     <button (click)="calcularMitjana()">Resultat</button>
-
   </table>
