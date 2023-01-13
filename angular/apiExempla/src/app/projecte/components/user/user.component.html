@@ -1,0 +1,25 @@
+<table>
+    <tr>
+        <td><button (click)="this.getAllUsers()">User</button></td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Gender</td>
+        <td>Status</td>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.gender}}</td>
+        <td>{{user.status}}</td>
+    </tr>
+    <tr>
+        <td><button (click)="guardar()">Guardar</button></td>
+        <td><input [(ngModel)]="this.user.name"></td>
+        <td><input [(ngModel)]="this.user.email"></td>
+        <td><input [(ngModel)]="this.user.gender"></td>
+        <td><input [(ngModel)]="this.user.status"></td>
+    </tr>
+</table>
+
+{{this.error}}
